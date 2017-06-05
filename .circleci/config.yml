@@ -4,6 +4,8 @@ jobs:
     working_directory: ~/learn_circleci
     docker:
       - image: circleci/node:6.10.3
+      - image: mongo:3.4.4
     steps:
       - checkout
       - run: echo "hello world~"
+      - run: node app.js
